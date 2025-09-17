@@ -1,3 +1,4 @@
+// ConferenceList.js (modificado para grilla 2 columnas)
 import React from 'react';
 import { FlatList, View, Text } from 'react-native';
 import ConferenceCard from './ConferenceCard';
@@ -14,6 +15,8 @@ const ConferenceList = ({ conferences, onConferencePress }) => {
           <ConferenceCard conference={item} onPress={onConferencePress} />
         )}
         showsVerticalScrollIndicator={false}
+        numColumns={2}
+        columnWrapperStyle={{ justifyContent: 'space-between', paddingHorizontal: 16 }}
       />
     </View>
   );
